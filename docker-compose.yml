@@ -1,9 +1,12 @@
 version: '2'
 services:
     php:
+        container_name: sf_php
         image: php:7.1-fpm
         volumes:
             - ./symfony:/var/www/symfony
+        links:
+            - mysql
     nginx:
         container_name: sf_nginx
         image: nginx:stable
