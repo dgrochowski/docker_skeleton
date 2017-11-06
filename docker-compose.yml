@@ -15,3 +15,13 @@ services:
             - php
         volumes:
             - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    mysql:
+        container_name: sf_mysql
+        image: mysql:5.7
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: symfony
+            MYSQL_USER: symfony
+            MYSQL_PASSWORD: symfony
+        ports:
+            - "3306:3306"
