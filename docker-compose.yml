@@ -1,0 +1,15 @@
+version: '2'
+services:
+    php:
+        image: php:7.1-fpm
+        volumes:
+            - ./symfony:/var/www/symfony
+    nginx:
+        container_name: sf_nginx
+        image: nginx:stable
+        ports:
+            - "80:80"
+        links:
+            - php
+        volumes_from:
+            - php
