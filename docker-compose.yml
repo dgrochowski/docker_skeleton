@@ -14,4 +14,4 @@ services:
         volumes_from:
             - php
         volumes:
-            - ./default.conf:/etc/nginx/conf.d/default.conf
+            - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
