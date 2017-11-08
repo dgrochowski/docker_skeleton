@@ -7,5 +7,3 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN composer --version
 
 RUN docker-php-ext-install pdo pdo_mysql
-
-WORKDIR /var/www/symfony
